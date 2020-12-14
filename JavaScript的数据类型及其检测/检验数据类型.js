@@ -1,6 +1,6 @@
 // typeof不能判断null，array
 typeof null; //object
-typeof [];
+typeof []; //object
 
 // instanceof不能检测字面量方式创建基本数据类型
 // 不能检测null和undefined
