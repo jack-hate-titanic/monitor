@@ -20,6 +20,6 @@
 
 #### 性能优化系列
 
-- [day6.介绍一下防抖节流原理，区别以及应用，并用 js 实现](https://github.com/Y-wson/Daily-Interview-Study/blob/main/基础知识/性能优化/js里垃圾回收机制是什么，常用的是哪种处理，怎么处理的.md)
+- [day6.js 的垃圾回收机制是什么，常用的是哪种处理，怎么处理的](https://github.com/Y-wson/Daily-Interview-Study/blob/main/基础知识/性能优化/js里垃圾回收机制是什么，常用的是哪种处理，怎么处理的.md)
 
 ![1](https://user-images.githubusercontent.com/17841561/114048392-1ac08e80-98bd-11eb-9870-d5e7266991d8.png)
