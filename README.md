@@ -16,7 +16,7 @@
 
 - [day5.介绍一下防抖节流原理，区别以及应用，并用 js 实现](https://github.com/Y-wson/Daily-Interview-Study/blob/main/%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/介绍一下防抖节流原理，区别以及应用，并用js实现.md)
 
-- [day7.请说一下对堆和栈的理解?](https://github.com/Y-wson/Daily-Interview-Study/blob/main/%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/介绍一下防抖节流原理，区别以及应用，并用js实现.md)
+- [day7.请说一下对堆和栈的理解?](https://github.com/Y-wson/Daily-Interview-Study/blob/main/%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/%E8%AF%B7%E8%AF%B4%E4%B8%80%E4%B8%8B%E5%AF%B9%E5%A0%86%E5%92%8C%E6%A0%88%E7%9A%84%E7%90%86%E8%A7%A3.md)
 
 #### 性能优化系列
 
