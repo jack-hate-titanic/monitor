@@ -18,6 +18,14 @@
 
 - [day7.请说一下对堆和栈的理解?](https://github.com/Y-wson/Daily-Interview-Study/blob/main/%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/%E8%AF%B7%E8%AF%B4%E4%B8%80%E4%B8%8B%E5%AF%B9%E5%A0%86%E5%92%8C%E6%A0%88%E7%9A%84%E7%90%86%E8%A7%A3.md)
 
+- [day8.请解释一下原型链](https://juejin.cn/post/6950275359371690021/)
+
+- [day9.setTimeout 与 setInterval 区别](https://github.com/lgwebdream/FE-Interview/issues/384)
+
+- [day10.对闭包的看法，为什么要用闭包？说一下闭包原理以及应用场景](https://github.com/lgwebdream/FE-Interview/issues/17)
+
+- [day11.CommonJS 模块 es6 模块有什么区别?]
+
 #### 性能优化系列
 
 - [day6.js 的垃圾回收机制是什么，常用的是哪种处理，怎么处理的](https://github.com/Y-wson/Daily-Interview-Study/blob/main/基础知识/性能优化/js里垃圾回收机制是什么，常用的是哪种处理，怎么处理的.md)
