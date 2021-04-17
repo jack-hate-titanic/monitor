@@ -24,10 +24,25 @@
 
 - [day10.对闭包的看法，为什么要用闭包？说一下闭包原理以及应用场景](https://github.com/lgwebdream/FE-Interview/issues/17)
 
-- [day11.CommonJS 模块 es6 模块有什么区别?]
+- [day11.CommonJS 模块 es6 模块有什么区别?](https://github.com/Y-wson/Daily-Interview-Study/blob/main/%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/CommonJS%20%E6%A8%A1%E5%9D%97%20es6%20%E6%A8%A1%E5%9D%97%E6%9C%89%E4%BB%80%E4%B9%88%E5%8C%BA%E5%88%AB.md)
+
+- [day12.赋值,深拷贝，浅拷贝的区别](https://github.com/Y-wson/Daily-Interview-Study/blob/main/%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/%E8%B5%8B%E5%80%BC%EF%BC%8C%E6%B7%B1%E6%8B%B7%E8%B4%9D%EF%BC%8C%E6%B5%85%E6%8B%B7%E8%B4%9D/%E8%B5%8B%E5%80%BC%EF%BC%8C%E6%B7%B1%E6%8B%B7%E8%B4%9D%EF%BC%8C%E6%B5%85%E6%8B%B7%E8%B4%9D%E5%8C%BA%E5%88%AB.js)
+
+- [day13.说一下事件循环机制]()
+
+- [day14.ES2020 新特性](https://github.com/ljianshu/Blog/issues/79)
+- [day15.7 个令人兴奋的 JavaScript 新特性](https://github.com/ljianshu/Blog/issues/78)
+- [day16.盘点 ES7、ES8、ES9、ES10 新特性](https://github.com/ljianshu/Blog/issues/76)
+- [day17.什么是 JavaScript 函数式编程？](https://github.com/ljianshu/Blog/issues/72)
+- [day18.JavaScript 中的垃圾回收和内存泄漏](https://github.com/ljianshu/Blog/issues/65)
+- [day19.Javascript 面试核心考点(基础版) ](https://github.com/ljianshu/Blog/issues/63)
 
 #### 性能优化系列
 
 - [day6.js 的垃圾回收机制是什么，常用的是哪种处理，怎么处理的](https://github.com/Y-wson/Daily-Interview-Study/blob/main/基础知识/性能优化/js里垃圾回收机制是什么，常用的是哪种处理，怎么处理的.md)
+
+- [day20.JS 优化--- createDocumentFragment()](https://www.jianshu.com/p/8ae83364c09c)
+
+- [day21.页面性能优化办法有哪些？](https://github.com/ljianshu/Blog/issues/9)
 
 ![1](https://user-images.githubusercontent.com/17841561/114048392-1ac08e80-98bd-11eb-9870-d5e7266991d8.png)
