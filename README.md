@@ -45,6 +45,8 @@
 
 - [day35.如何实现图片懒加载思路](https://github.com/lgwebdream/FE-Interview/issues/924)
 
+- [day37.js 的各种位置，比如 clientHeight,scrollHeight,offsetHeight ,以及 scrollTop, offsetTop,clientTop 的区别](https://github.com/Y-wson/Daily-Interview-Study/blob/main/基础知识/0419/js的各种位置，比如clientHeight,scrollHeight,offsetHeight ,以及 scrollTop, offsetTop,clientTop 的区别.md)
+
 #### 性能优化系列
 
 - [day6.js 的垃圾回收机制是什么，常用的是哪种处理，怎么处理的](https://github.com/Y-wson/Daily-Interview-Study/blob/main/基础知识/性能优化/js里垃圾回收机制是什么，常用的是哪种处理，怎么处理的.md)
