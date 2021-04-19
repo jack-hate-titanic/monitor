@@ -43,6 +43,8 @@
 - [day27.浏览器存储](https://github.com/ljianshu/Blog/issues/25)
 - [day33.九种跨域方式实现原理（完整版）](https://github.com/ljianshu/Blog/issues/55)
 
+- [day35.如何实现图片懒加载思路](https://github.com/lgwebdream/FE-Interview/issues/924)
+
 #### 性能优化系列
 
 - [day6.js 的垃圾回收机制是什么，常用的是哪种处理，怎么处理的](https://github.com/Y-wson/Daily-Interview-Study/blob/main/基础知识/性能优化/js里垃圾回收机制是什么，常用的是哪种处理，怎么处理的.md)
@@ -58,12 +60,20 @@
 #### 网络篇
 
 - [day23.深入理解 https 工作原理](https://github.com/ljianshu/Blog/issues/50)
+
 - [day28.浏览器存储](https://github.com/ljianshu/Blog/issues/25)
+
 - [day29.从 URL 输入到页面展现到底发生什么？](https://github.com/ljianshu/Blog/issues/24)
+
 - [day30.关于 Http 协议，你必须要知道的](https://github.com/ljianshu/Blog/issues/22)
+
 - [day31.深入理解浏览器的缓存机制](https://github.com/ljianshu/Blog/issues/23)
+
 - [day32.常见六大 Web 安全攻防解析](https://github.com/ljianshu/Blog/issues/56)
+
 - [day34.解读 HTTP/2 及 HTTP/3 特性](https://github.com/ljianshu/Blog/issues/57)
+
+- [day36.get 和 post 在缓存方面的区别](https://github.com/Y-wson/Daily-Interview-Study/blob/main/%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/0419/%E8%A1%A5%E5%85%85get%E5%92%8Cpost%E8%AF%B7%E6%B1%82%E5%9C%A8%E7%BC%93%E5%AD%98%E6%96%B9%E9%9D%A2%E7%9A%84%E5%8C%BA%E5%88%AB.md)
 
 #### 移动端
 
