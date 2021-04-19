@@ -45,7 +45,7 @@
 
 - [day35.如何实现图片懒加载思路](https://github.com/lgwebdream/FE-Interview/issues/924)
 
-- [day37.js 的各种位置，比如 clientHeight,scrollHeight,offsetHeight ,以及 scrollTop, offsetTop,clientTop 的区别](https://github.com/Y-wson/Daily-Interview-Study/blob/main/基础知识/0419/js的各种位置，比如clientHeight,scrollHeight,offsetHeight ,以及 scrollTop, offsetTop,clientTop 的区别.md)
+- [day37.js 中 clientHeight,scrollHeight,offsetHeight,以及 scrollTop, offsetTop,clientTop 的区别](https://github.com/Y-wson/Daily-Interview-Study/blob/main/%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/0419/js%E7%9A%84%E5%90%84%E7%A7%8D%E4%BD%8D%E7%BD%AE%EF%BC%8C%E6%AF%94%E5%A6%82clientHeight%2CscrollHeight%2CoffsetHeight%20%2C%E4%BB%A5%E5%8F%8AscrollTop%2C%20offsetTop%2CclientTop%E7%9A%84%E5%8C%BA%E5%88%AB.md)
 
 #### 性能优化系列
 
