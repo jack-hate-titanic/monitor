@@ -4,4 +4,4 @@ const sum = a.reduce((init, item) => {
   return init + item;
 });
 
-console.log(sum);
+console.log(a, sum);
