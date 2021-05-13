@@ -12,19 +12,33 @@ const fib = (n) => {
   return fib(n - 1) + fib(n - 2);
 };
 
-const fib1 = (n) => {
-  if (n <= 1) {
-    return n;
+// const fib1 = (n) => {
+//   if (n <= 1) {
+//     return n;
+//   }
+//   let first = 0;
+//   let second = 1;
+//   for (let i = 0; i < n - 1; i++) {
+//     let sum = first + second;
+//     first = second;
+//     second = sum;
+//   }
+//   return second;
+// };
+// console.time("a");
+// console.log(fib1(4));
+// console.timeEnd("a");
+
+const fib2 = () => {
+  const arr = [];
+  arr[0] = 0;
+  arr[1] = 1;
+  for (let i = 2; i < 20; i++) {
+    arr[i] = arr[i - 1] + arr[i - 2];
   }
-  let first = 0;
-  let second = 1;
-  for (let i = 0; i < n - 1; i++) {
-    let sum = first + second;
-    first = second;
-    second = sum;
+  for (let j = 0; j < arr.length; j++) {
+    console.log(arr[j]);
   }
-  return second;
 };
-console.time("a");
-console.log(fib1(4));
-console.timeEnd("a");
+
+console.log(fib2());
