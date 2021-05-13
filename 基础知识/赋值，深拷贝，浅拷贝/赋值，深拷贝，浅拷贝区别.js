@@ -27,6 +27,7 @@
 
 // 浅拷贝
 const shadowClone = (source) => {
+  // 重新开辟一块内存空间，因为是复杂类型，所以是在堆内存中开辟一块内存空间
   const target = {};
   for (let i in source) {
     // 因为for  in遍历对象的时候还会遍历原型上面的属性，所以需要hasOwnProperty判断一下
