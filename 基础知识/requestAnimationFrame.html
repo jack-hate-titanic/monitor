@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body></body>
+  <script>
+    console.time();
+    var progress = 0;
+    //回调函数
+    function render() {
+      progress += 1; //修改图像的位置
+      if (progress < 100) {
+        //在动画没有结束前，递归渲染
+        window.requestAnimationFrame(render);
+      }
+      if (progress === 100) {
+        console.timeEnd();
+      }
+    }
+    //第一帧渲染
+    window.requestAnimationFrame(render);
+  </script>
+</html>

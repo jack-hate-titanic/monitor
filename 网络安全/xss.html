@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <input type="text" value="" />
+    <script>
+      alert("XSS");
+    </script>
+    ">
+    <button>搜索</button>
+    <div>
+      您搜索的关键词是：">
+      <script>
+        alert("XSS");
+      </script>
+    </div>
+  </body>
+  <script></script>
+</html>
+
+<!-- 关于网络安全这个面试题，第一把美团的文章看完，第二把网络原理安全搞明白 -->
