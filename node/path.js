@@ -2,6 +2,8 @@ const path = require("path");
 
 console.log(path.basename(__filename));
 
-// 数据结构与算法： 把主观题全部都敲一遍
+console.log(path.basename(__dirname));
 
-// react开始在复习
+console.log(path.join("/a", "/b"));
+
+console.log(path.resolve("/a"));
