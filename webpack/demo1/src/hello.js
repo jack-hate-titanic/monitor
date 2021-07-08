@@ -1,3 +1,3 @@
-export default {
-  a: "B",
-};
+const hello = "hello";
+
+export default hello;
