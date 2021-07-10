@@ -8,7 +8,7 @@
 
 - [解释一下什么是 BFC，有什么特性？](https://github.com/Y-wson/Daily-Interview-Study/blob/main/%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/%E8%A7%A3%E9%87%8A%E4%B8%80%E4%B8%8B%E4%BB%80%E4%B9%88%E6%98%AF%20BFC%EF%BC%8C%E6%9C%89%E4%BB%80%E4%B9%88%E7%89%B9%E6%80%A7.md)
 
-- [如何居中一个元素](https://github.com/ljianshu/Blog/issues/29)
+- [如何居中一个元素](https://github.com/Y-wson/Daily-Interview-Study/blob/main/%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/%E5%9E%82%E7%9B%B4%E5%B1%85%E4%B8%AD.md)
 
 #### js 系列：
 
