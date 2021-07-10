@@ -22,7 +22,7 @@
 
 - [请解释一下原型链](https://juejin.cn/post/6950275359371690021/)
 
-- [setTimeout 与 setInterval 区别](https://github.com/lgwebdream/FE-Interview/issues/384)
+- [setTimeout 与 setInterval 区别](https://github.com/Y-wson/Daily-Interview-Study/blob/main/%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/setTimout%E5%92%8CsetInterval%E7%9A%84%E5%8C%BA%E5%88%AB.md)
 
 - [对闭包的看法，为什么要用闭包？说一下闭包原理以及应用场景](https://github.com/lgwebdream/FE-Interview/issues/17)
 
