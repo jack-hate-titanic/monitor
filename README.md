@@ -84,3 +84,5 @@
 #### 手写题
 
 - [手写 new 的实现](https://github.com/Y-wson/Daily-Interview-Study/blob/main/%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/new.js)
+
+- [手写 require 的实现](https://github.com/Y-wson/Daily-Interview-Study/blob/main/require/mini_require.js)
