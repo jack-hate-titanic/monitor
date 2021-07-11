@@ -1,1 +1,3 @@
-const a = "hello require";
+const a = require("./b.js");
+
+module.exports = a;
