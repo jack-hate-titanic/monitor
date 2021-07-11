@@ -9,6 +9,9 @@ const createDomElement = (virtualDom) => {
     newElement = document.createElement(virtualDom.type);
     updateNodeElement(newElement, virtualDom);
   }
+
+  newElement._virtualDom = virtualDom;
+
   if (virtualDom.children) {
     virtualDom.children.forEach((child) => {
       // 之所以这样调用是不确定是组件还是节点

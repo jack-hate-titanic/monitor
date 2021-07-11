@@ -8,8 +8,14 @@ class Alert extends TinyReact.Component {
     };
   }
 
+  onChangeTitle = () => {
+    this.setState({
+      title: "new title",
+    });
+  };
+
   render() {
-    return <div>{this.props.message}</div>;
+    return <div onClick={this.onChangeTitle}>{this.state.title}</div>;
   }
 }
 

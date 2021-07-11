@@ -1,14 +1,21 @@
-const updateNodeElement = (newElement, virtualDom) => {
+const updateNodeElement = (newElement, virtualDom, oldVirtualDOM = {}) => {
   // 获取节点对应的属性对象
   const newProps = virtualDom.props;
-  if (newProps) {
-    Object.keys(newProps).forEach((propName) => {
-      const newPropsValue = newProps[propName];
+  const oldProps = oldVirtualDOM.props || {};
+
+  Object.keys(newProps).forEach((propName) => {
+    const newPropsValue = newProps[propName];
+    const oldPropsValue = oldProps[propName];
+    if (newPropsValue !== oldPropsValue) {
       // 判断事件属性
       if (propName.slice(0, 2) === "on") {
         const eventName = propName.toLowerCase().slice(2);
         // 为元素添加事件
         newElement.addEventListener(eventName, newPropsValue);
+        // 删除原有的事件的事件处理函数
+        if (oldPropsValue) {
+          newElement.removeEventListener(eventName, oldPropsValue);
+        }
       } else if (propName === "value" || propName === "checked") {
         newElement[propName] = newPropsValue;
       } else if (propName !== "children") {
@@ -18,8 +25,23 @@ const updateNodeElement = (newElement, virtualDom) => {
           newElement.setAttribute(propName, newPropsValue);
         }
       }
-    });
-  }
+    }
+  });
+
+  // 判断属性被删除的情况
+  Object.keys(oldProps).forEach((propName) => {
+    const newPropsValue = newProps[propName];
+    const oldPropsValue = oldProps[propName];
+    if (!newPropsValue) {
+      // 属性被删除了
+      if (propName.slice(0, 2) === "on") {
+        const eventName = propName.toLowerCase().slice(2);
+        newElement.removeEventListener(eventName, oldPropsValue);
+      } else if (propName !== "children") {
+        newElement.removeAttribute(propName);
+      }
+    }
+  });
 };
 
 export default updateNodeElement;

@@ -7,5 +7,9 @@
         "pragma": "TinyReact.createElement"
       }
     ]
+  ],
+  "plugins": [
+    "@babel/plugin-transform-arrow-functions", // 这个是箭头函数的处理
+    ["@babel/plugin-proposal-class-properties", { "loose": false }] // 这里是关键
   ]
 }
