@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    #box {
+      background-color: green;
+      height: 100px;
+    }
+  </style>
+  <body>
+    <div id="box"></div>
+    <button id="btn1">执行任务</button>
+    <button id="btn2">变换颜色</button>
+  </body>
+  <script>
+    const box = document.getElementById("box");
+    const btn2 = document.getElementById("btn2");
+    const btn1 = document.getElementById("btn1");
+    let num = 39999;
+    const mainTask = function (deadline) {
+      while (num > 0 && deadline.timeRemaining() > 1) {
+        console.log(num);
+        num--;
+      }
+      // requestIdleCallback(mainTask);
+    };
+    btn1.onclick = function () {
+      requestIdleCallback(mainTask);
+    };
+    btn2.onclick = function () {
+      box.style.background = "yellow";
+    };
+  </script>
+</html>
