@@ -2,10 +2,12 @@
   "name": "fiber",
   "version": "1.0.0",
   "description": "",
-  "main": "babel.config.js",
+  "main": "babel.config.json",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js"
+    "start": "npm-run-all --parallel dev:*",
+    "dev:server-compile": "webpack --config webpack.config.server.js --watch",
+    "dev:server": "nodemon ./build/server.js",
+    "dev:client-compile": "webpack --config webpack.config.client.js --watch"
   },
   "author": "",
   "license": "ISC",
