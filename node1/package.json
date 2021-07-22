@@ -1,0 +1,23 @@
+{
+  "name": "node1",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "bin": {
+    "ws": "./index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "commander": "^8.0.0",
+    "inquirer": "^8.1.2"
+  },
+  "devDependencies": {
+    "colors": "^1.4.0",
+    "puppeteer": "^10.1.0"
+  }
+}
