@@ -86,3 +86,12 @@
 - [手写 new 的实现](https://github.com/Y-wson/Daily-Interview-Study/blob/main/%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/new.js)
 
 - [手写 require 的实现](https://github.com/Y-wson/Daily-Interview-Study/blob/main/require/mini_require.js)
+
+### 复习计划 每篇文章至少举五个例子
+
+前端思维导图和不错的文章
+node 和浏览器事件循环
+promise
+执行上下文
+脚手架搭建
+作用域和作用域链
