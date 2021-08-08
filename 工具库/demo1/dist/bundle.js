@@ -11,7 +11,7 @@ var Person = function Person() {
   _classCallCheck(this, Person);
 
   _defineProperty(this, "state", {
-    aa: '1'
+    aa: "1"
   });
 
   _defineProperty(this, "outPut", function () {

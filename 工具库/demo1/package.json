@@ -15,8 +15,7 @@
   },
   "lint-staged": {
     "*.{js}": [
-      "prettier --write",
-      "git add"
+      "eslint"
     ]
   },
   "keywords": [],
