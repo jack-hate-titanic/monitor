@@ -1,0 +1,35 @@
+{
+  "name": "demo1",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "webpack --config webpack.config.js --watch",
+    "eslint": "eslint --ext .js src",
+    "lint-staged": "lint-staged"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.{js}": [
+      "prettier --write",
+      "git add"
+    ]
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/core": "^7.15.0",
+    "@babel/preset-env": "^7.15.0",
+    "babel-loader": "^8.2.2",
+    "eslint": "^7.32.0",
+    "husky": "^7.0.1",
+    "lint-staged": "^11.1.2",
+    "webpack": "^5.49.0",
+    "webpack-cli": "^4.7.2"
+  }
+}
