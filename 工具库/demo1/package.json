@@ -8,7 +8,7 @@
     "eslint": "eslint --ext .js src",
     "lint-staged": "lint-staged"
   },
-  "pre-commit": "lint:staged",
+  "pre-commit": "lint-staged",
   "lint-staged": {
     "*.{js}": [
       "eslint --ext .js src"
