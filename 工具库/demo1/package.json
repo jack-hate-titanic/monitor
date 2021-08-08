@@ -8,11 +8,13 @@
     "eslint": "eslint --ext .js src",
     "lint-staged": "lint-staged"
   },
-  "pre-commit": "lint-staged",
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run lint-staged"
+    }
+  },
   "lint-staged": {
-    "*.{js}": [
-      "eslint --ext .js src"
-    ]
+    "**/*.js": "eslint --ext .js"
   },
   "keywords": [],
   "author": "",
