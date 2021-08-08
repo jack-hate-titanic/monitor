@@ -11,7 +11,7 @@
   "pre-commit": "lint:staged",
   "lint-staged": {
     "*.{js}": [
-      "eslint"
+      "eslint --ext .js src"
     ]
   },
   "keywords": [],
