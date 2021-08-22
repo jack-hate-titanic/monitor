@@ -13,7 +13,7 @@
     }
   },
   "lint-staged": {
-    "**/*.js": "eslint --ext .js src"
+    "src/*.js": "eslint --ext .js src"
   },
   "keywords": [],
   "author": "",
