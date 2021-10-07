@@ -1,13 +1,15 @@
 {
   "name": "webpack01",
   "version": "1.0.0",
-  "description": "",
+  "description": "从0到1配置一个能够解析js,css,开启热更新功能的项目",
   "main": "index.js",
   "scripts": {
     "start": "webpack-dev-server --config webpack.config.js"
   },
-  "keywords": [],
-  "author": "",
+  "keywords": [
+    "webpack"
+  ],
+  "author": "ws",
   "license": "ISC",
   "devDependencies": {
     "@babel/core": "^7.15.5",
