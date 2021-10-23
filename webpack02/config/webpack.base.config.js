@@ -1,7 +1,7 @@
 /*
  * @Author: your name
  * @Date: 2021-10-19 22:49:43
- * @LastEditTime: 2021-10-20 08:35:46
+ * @LastEditTime: 2021-10-21 23:10:17
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: /webpack02/config/webpack.base.config.js
@@ -20,6 +20,7 @@ module.exports = {
     filename: `js/[name]${isDev ? "" : ".[hash:8]"}.js`,
     path: path.join(__dirname, "../dist"),
   },
+  devtool: "eval-cheap-module-source-map",
   module: {
     rules: [
       {
@@ -29,7 +30,19 @@ module.exports = {
       },
       {
         test: /\.(css|less)$/,
-        use: ["style-loader", "css-loader", "less-loader"],
+        use: [
+          "style-loader",
+          "css-loader",
+          {
+            loader: "postcss-loader",
+            options: {
+              postcssOptions: {
+                plugins: [require("postcss-preset-env")],
+              },
+            },
+          },
+          "less-loader",
+        ],
       },
       {
         test: /\.(jpg|png|gif)$/,
