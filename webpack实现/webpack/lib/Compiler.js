@@ -1,7 +1,7 @@
 /*
  * @Author: your name
  * @Date: 2021-10-20 22:51:32
- * @LastEditTime: 2021-10-24 18:33:34
+ * @LastEditTime: 2021-10-30 21:36:56
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: /webpack实现/webpack/Compiler.js
@@ -31,7 +31,7 @@ class Compiler extends Tapable {
       make: new AsyncParallelHook(["compilation"]),
       thisCompilation: new SyncHook(["compilation", "params"]), //开始一次新的编译
       compilation: new SyncHook(["compilation", "params"]), //创建完成一个新的compilation
-      afterCompiler: new AsyncSeriesHook(["compilation"]),
+      afterCompiler: new AsyncSeriesHook(["compilation"]), // 异步串行钩子
     };
     this.options = {};
     this.context = context; //设置上下文路径
