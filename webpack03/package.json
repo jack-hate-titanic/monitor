@@ -28,5 +28,9 @@
     "webpack-dev-server": "^4.4.0",
     "webpack-merge": "^5.8.0",
     "webpackbar": "^5.0.0-3"
+  },
+  "dependencies": {
+    "react-redux": "^7.2.6",
+    "redux": "^4.1.2"
   }
 }
