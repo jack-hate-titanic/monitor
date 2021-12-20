@@ -1,0 +1,37 @@
+<!--
+ * @Author: your name
+ * @Date: 2021-12-19 22:05:13
+ * @LastEditTime: 2021-12-19 22:16:32
+ * @LastEditors: Please set LastEditors
+ * @Description: 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AEh
+ * @FilePath: /事件机制/index.html
+-->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="node">按钮</div>
+  </body>
+  <script>
+    const node = document.getElementById("node");
+    node.addEventListener(
+      "click",
+      () => {
+        console.log("冒泡");
+      },
+      false
+    );
+    node.addEventListener(
+      "click",
+      () => {
+        console.log("捕获");
+      },
+      true
+    );
+  </script>
+</html>
