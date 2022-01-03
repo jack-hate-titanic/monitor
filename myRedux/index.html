@@ -1,0 +1,48 @@
+<!--
+ * @Author: your name
+ * @Date: 2021-12-30 22:38:09
+ * @LastEditTime: 2021-12-30 22:50:55
+ * @LastEditors: Please set LastEditors
+ * @Description: 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
+ * @FilePath: /myRedux/index.html
+-->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <button id="increment">+1</button>
+    <span id="state">0</span>
+    <button id="decrement">-1</button>
+  </body>
+  <script src="./myRedux.js"></script>
+  <script>
+    function reducer(state, action) {
+      switch (action.type) {
+        case "increment":
+          return state + 1;
+        case "decrement":
+          return state - 1;
+        default:
+          return state;
+      }
+    }
+    const store = createStore(reducer, 0);
+    store.subscribe(() => {
+      console.log(store.getState());
+      document.getElementById("state").innerHTML = store.getState();
+    });
+    // 获取加按钮
+    document.getElementById("increment").onclick = function () {
+      store.dispatch({ type: "increment" });
+    };
+    // 获取减按钮
+    document.getElementById("decrement").onclick = function () {
+      store.dispatch({ type: "decrement" });
+    };
+  </script>
+</html>
