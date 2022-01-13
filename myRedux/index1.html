@@ -1,10 +1,10 @@
 <!--
  * @Author: your name
- * @Date: 2021-12-30 22:38:09
- * @LastEditTime: 2022-01-13 22:09:06
+ * @Date: 2022-01-13 20:50:47
+ * @LastEditTime: 2022-01-13 22:13:59
  * @LastEditors: Please set LastEditors
  * @Description: 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
- * @FilePath: /myRedux/index.html
+ * @FilePath: /myRedux/index1.html
 -->
 <!DOCTYPE html>
 <html lang="en">
@@ -19,7 +19,7 @@
     <span id="state">0</span>
     <button id="decrement">-1</button>
   </body>
-  <script src="./myRedux.js"></script>
+  <script src="./MyRedux1.js"></script>
   <script>
     function reducer(state, action) {
       switch (action.type) {
@@ -32,20 +32,18 @@
       }
     }
     const store = createStore(reducer, 0);
-    store.subscribe(() => {
-      console.log(store.getState());
-      document.getElementById("state").innerHTML = store.getState();
-    });
-    // 获取加按钮
-    document.getElementById("increment").onclick = function () {
+
+    const incrementBtn = document.getElementById("increment");
+    const decrementBtn = document.getElementById("decrement");
+    const state = document.getElementById("state");
+    incrementBtn.onclick = function () {
       store.dispatch({ type: "increment" });
     };
-    // 获取减按钮
-    document.getElementById("decrement").onclick = function () {
+    decrementBtn.onclick = function () {
       store.dispatch({ type: "decrement" });
     };
     store.subscribe(function () {
-      state = store.getState();
+      state.innerHTML = store.getState();
     });
   </script>
 </html>
