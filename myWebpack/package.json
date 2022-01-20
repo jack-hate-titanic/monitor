@@ -1,0 +1,20 @@
+{
+  "name": "myWebpack",
+  "version": "1.0.0",
+  "scripts": {
+    "build": "node bin/webpack.js"
+  },
+  "main": "index.js",
+  "license": "MIT",
+  "devDependencies": {
+    "@babel/core": "^7.16.7",
+    "@babel/parser": "^7.16.8",
+    "@babel/preset-env": "^7.16.8",
+    "@babel/traverse": "^7.16.8",
+    "babel-loader": "^8.2.3",
+    "ejs": "^3.1.6",
+    "less": "^4.1.2",
+    "loader-utils": "2.0.0",
+    "tapable": "^2.2.1"
+  }
+}
