@@ -1,7 +1,7 @@
 /*
  * @Author: your name
  * @Date: 2022-01-15 18:20:37
- * @LastEditTime: 2022-01-15 19:23:11
+ * @LastEditTime: 2022-01-22 11:56:07
  * @LastEditors: Please set LastEditors
  * @Description: 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
  * @FilePath: /myRequire/index.js
@@ -64,10 +64,11 @@ function myRequire(filename) {
   let abs = Module._resolveFileName(filename);
   // 2.缓存优先
   let isExistsCache = Module._cache[abs];
-  if (isExistsCache) return Module._cache[abs];
+  if (isExistsCache) return isExistsCache.exports;
 
   // 编译执行
   const module = new Module(abs);
+  MyModule._cache[abs] = module;
   module.load(module);
   return module.exports;
 }
