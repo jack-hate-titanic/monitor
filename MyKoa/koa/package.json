@@ -1,6 +1,6 @@
 {
   "name": "koa",
   "version": "1.0.0",
-  "main": "lib/application",
+  "main": "lib/application1",
   "license": "MIT"
 }
