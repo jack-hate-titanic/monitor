@@ -1,7 +1,7 @@
 /*
  * @Author: your name
  * @Date: 2022-01-19 20:34:05
- * @LastEditTime: 2022-01-20 22:28:01
+ * @LastEditTime: 2022-01-26 21:57:26
  * @LastEditors: Please set LastEditors
  * @Description: 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
  * @FilePath: /myWebpack/lib/Compiler.js
@@ -48,7 +48,9 @@ class Compiler {
               loopLoader();
             }
           }
-          loopLoader();
+          if (len >= 0) {
+            loopLoader();
+          }
         }
       }
       return content;
@@ -59,29 +61,41 @@ class Compiler {
   }
   // 根据模块的源码进行解析
   parse(source, moduleName) {
-    console.log("解析模块" + moduleName);
     let dirname = path.dirname(moduleName);
     let dependencies = []; //模块依赖项列表
     const requirePlugin = {
       visitor: {
-        CallExpression(p) {
+        ImportDeclaration(p) {
           const node = p.node;
-          if (node.callee.name === "require") {
-            node.callee.name = "__webpack_require__";
-            // 路径替换
-            let modulePath = node.arguments[0].value;
-            modulePath =
-              "./" + path.join(dirname, modulePath).replace(/\\/g, "/");
-            node.arguments = [t.stringLiteral(modulePath)];
-            dependencies.push(modulePath);
-          }
+          const id = t.identifier("a");
+          const callee = t.identifier("__webpack_require__");
+          const args = t.stringLiteral(node.source.value);
+          const init = t.callExpression(callee, [args]);
+          const f = t.variableDeclaration(
+            "var",
+            t.variableDeclarator(id, init)
+          );
+          p.replaceWith(f);
+          let modulePath = node.source.value;
+          modulePath =
+            "./" + path.join(dirname, modulePath).replace(/\\/g, "/");
+          dependencies.push(modulePath);
+          // if (node.callee.name === "require") {
+          //   node.callee.name = "__webpack_require__";
+          //   // 路径替换
+          //   let modulePath = node.arguments[0].value;
+          //   modulePath =
+          //     "./" + path.join(dirname, modulePath).replace(/\\/g, "/");
+          //   node.arguments = [t.stringLiteral(modulePath)];
+          //   dependencies.push(modulePath);
+          // }
         },
       },
     };
     const result = babel.transform(source, {
       plugins: [requirePlugin],
     });
-    console.log(result.code);
+    console.log(result.code, 111);
     return {
       sourceCode: result.code,
       dependencies,

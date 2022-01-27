@@ -1,2 +1,2 @@
-const a = require("./app.js");
+import { a } from "./app.js";
 console.log(a);

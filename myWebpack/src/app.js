@@ -1,2 +1,1 @@
-const a = "app";
-module.exports = a;
+export const a = "app";

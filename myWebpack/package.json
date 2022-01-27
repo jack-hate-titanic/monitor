@@ -2,7 +2,8 @@
   "name": "myWebpack",
   "version": "1.0.0",
   "scripts": {
-    "build": "node bin/webpack.js"
+    "build": "node bin/webpack.js",
+    "wBuild": "webpack --config webpack.config.js"
   },
   "main": "index.js",
   "license": "MIT",
@@ -15,6 +16,8 @@
     "ejs": "^3.1.6",
     "less": "^4.1.2",
     "loader-utils": "2.0.0",
-    "tapable": "^2.2.1"
+    "tapable": "^2.2.1",
+    "webpack": "^5.67.0",
+    "webpack-cli": "^4.9.1"
   }
 }
