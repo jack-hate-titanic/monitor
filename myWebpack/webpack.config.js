@@ -1,12 +1,14 @@
 /*
  * @Author: your name
  * @Date: 2022-01-19 20:58:50
- * @LastEditTime: 2022-01-27 22:26:46
+ * @LastEditTime: 2022-01-28 22:10:48
  * @LastEditors: Please set LastEditors
  * @Description: 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
  * @FilePath: /myWebpack/webpack.config.js
  */
 const path = require("path");
+const RunPlugin = require("./plugins/RunPlugin");
+const DonePlugin = require("./plugins/DonePlugin");
 
 module.exports = {
   context: process.cwd(), // 当前的根目录
