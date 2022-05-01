@@ -1,32 +1,46 @@
+<!--
+ * @Author: your name
+ * @Date: 2021-07-22 21:56:32
+ * @LastEditTime: 2022-04-26 22:10:21
+ * @LastEditors: Please set LastEditors
+ * @Description: 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
+ * @FilePath: /frontDemo/调用栈/调用栈.html
+-->
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-  </head>
-  <body></body>
-  <script>
-    var a = "Hello World!";
-
-    function first() {
-      console.log("Inside first function");
-      second();
-      console.log("Again inside first function");
-    }
-
-    function second() {
-      console.trace();
-      console.log("Inside second function");
-    }
-
-    first();
-    console.log("Inside Global Execution Context");
-
-    // Inside first function
-    // Inside second function
-    // Again inside first function
-    // Inside Global Execution Context
-  </script>
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<style>
+  .item{
+    display: flex;
+    background: red;
+    height: 100px;
+  }
+  .first{
+    width: 2000px;
+    background: orange;
+  }
+  .second{
+    background: black;
+    width: 200px;
+  }
+</style>
+<body>
+  <div class="item">
+    <div class="first"></div>
+    <div class="second"></div>
+  </div>
+</body>
+<script>
+  var b = 3;
+  console.log(a);
+  function get(){
+    var a = 3;
+    console.log(b);
+  }
+</script>
 </html>
