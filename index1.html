@@ -1,0 +1,51 @@
+<!--
+ * @Author: your name
+ * @Date: 2022-05-01 10:24:09
+ * @LastEditTime: 2022-05-03 15:01:00
+ * @LastEditors: Please set LastEditors
+ * @Description: 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
+ * @FilePath: /frontDemo/index1.html
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+ <button onclick="onClickButton()">按钮</button>
+</body>
+<script>
+function throttle(time,fn){
+  let pre = 0;
+  let now = 0;
+  return function(...args){
+    now = new Date();
+    if(now-pre>time){
+      fn.apply(this,args);
+      pre = new Date();
+    }
+  }
+  
+}
+
+var name = '2s'
+
+function run(){
+  console.log(this.name);
+}
+
+let click = throttle(1000,run);
+
+function onClickButton(){
+  click('ws',10);
+}
+
+
+
+</script>
+
+</html>
