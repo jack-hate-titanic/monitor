@@ -1,0 +1,12 @@
+function instanceOf(left:any, right:any):boolean {
+  while (Object.getPrototypeOf(left)) {
+    if (Object.getPrototypeOf(left) === right) {
+      return;
+    }
+    left = Object.getPrototypeOf(left);
+  }
+  return false;
+}
+
+
+instanceOf([],Array)
