@@ -1,0 +1,57 @@
+<!--
+ * @Author: your name
+ * @Date: 2022-05-15 11:07:53
+ * @LastEditTime: 2022-05-15 11:32:09
+ * @LastEditors: Please set LastEditors
+ * @Description: 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
+ * @FilePath: /frontDemo/symbol.html
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  
+</body>
+<script>
+  (function () {
+  let root = this;
+  let postfix = 0;
+  let SymbolPolyfill = function Symbol(description) {
+    // 不可以使用new操作符
+    if (this instanceof SymbolPolyfill) {
+      throw new TypeError('symbol is not a constructor');
+    }
+    // 如果是传入undefined则为undefined，如果传入对象，会调用toString方法
+    let descString = description === undefined ? undefined : String(description);
+    // 转化输出结果,唯一值
+    let symbol = Object.create({
+      toString: function () {
+        postfix++;
+        return `Symbol(${this.__Description__}_${postfix})`
+      }
+    });
+    // 定义__Description__属性，不能修改，不能删除，不能通过for...in遍历
+    Object.defineProperties(symbol, {
+      '__Description__': {
+        value: descString,
+        writable: false,
+        enumerable: false,
+        configurable: false
+      }
+
+      
+    })
+    return symbol.toString();
+  }
+  root.SymbolPolyfill = SymbolPolyfill;
+})();
+
+let a = SymbolPolyfill(2);
+console.log(a);
+</script>
+</html>
