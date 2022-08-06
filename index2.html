@@ -1,0 +1,63 @@
+<!--
+ * @Author: 悦者生存 1002783067@qq.com
+ * @Date: 2022-07-14 22:50:27
+ * @LastEditors: 悦者生存 1002783067@qq.com
+ * @LastEditTime: 2022-07-14 22:50:47
+ * @FilePath: /frontDemo/index2.html
+ * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
+-->
+<style>
+  body{
+    margin:0;
+    padding:0;
+  }
+  .box {
+    width: 100px;
+    height: 100px;
+    background: rgba(240, 163, 163, 0.4);
+    border: 1px solid pink;
+    border-radius: 10px;
+    text-align: center;
+  }
+  #a {
+  }
+  #b {
+    position: absolute;
+    top:0;
+    left: 80;
+    z-index: 2;
+  }
+  #c {
+    position: absolute;
+    top:0;
+
+    left: 160;
+    z-index: 3;
+    transform: translateZ(0);
+  }
+  #d {
+    position: absolute;
+    top:0;
+
+    left: 240;
+    z-index: 4;
+  }
+  .description {
+    font-size: 10px;
+  }
+</style>
+
+<div id="a" class="box">A</div>
+<div id="b" class="box">
+  B
+  <div class="description">z-index:2</div>
+</div>
+<div id="c" class="box">
+  C
+  <div class="description">z-index:3</div>
+  <div class="description">transform: translateZ(0)</div>
+</div>
+<div id="d" class="box">
+  D
+  <div class="description">z-index:4</div>
+</div>

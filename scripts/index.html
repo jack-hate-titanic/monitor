@@ -1,0 +1,67 @@
+<!--
+ * @Author: 悦者生存 1002783067@qq.com
+ * @Date: 2022-06-09 22:24:47
+ * @LastEditors: 悦者生存 1002783067@qq.com
+ * @LastEditTime: 2022-06-12 11:06:01
+ * @FilePath: /scripts/index.html
+ * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .father {
+            overflow: hidden;
+            width: 300px;
+            height: 300px;
+            margin: 100px auto;
+            background-color: pink;
+            text-align: center;
+        }
+
+        .son {
+            width: 200px;
+            height: 200px;
+            margin: 50px;
+            background-color: purple;
+            line-height: 200px;
+            color: #fff;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="father">
+        <div class="son">son盒子</div>
+    </div>
+    <script>
+        var son = document.querySelector('.son');
+        son.addEventListener('click', function() {
+            console.log('son');
+        }, true);
+        var father = document.querySelector('.father');
+        father.addEventListener('click', function() {
+            console.log('father');
+        }, true);
+        document.addEventListener('click', function() {
+            console.log('document');
+        }, true);
+        son.addEventListener('click', function() {
+            console.log('son');
+            return false;
+        }, false);
+        father.addEventListener('click', function() {
+            console.log('father');
+        }, false);
+        document.addEventListener('click', function() {
+            console.log('document');
+        })
+    </script>
+</body>
+
+</html>

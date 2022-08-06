@@ -1,0 +1,40 @@
+<!--
+ * @Author: 悦者生存 1002783067@qq.com
+ * @Date: 2022-05-28 21:23:51
+ * @LastEditors: 悦者生存 1002783067@qq.com
+ * @LastEditTime: 2022-05-28 21:57:51
+ * @FilePath: /frontDemo/countDown.html
+ * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  
+</body>
+<script>
+  let animationRef = null;
+  let count = 3;
+  let pre = 0;
+  function animation(){
+      let now = new Date();
+      if(now-pre>1000){
+        count--;
+        console.log(count);
+        pre = new Date;
+      }
+      if(count<=0){
+        console.log(count);
+        cancelAnimationFrame(animationRef);
+        return;
+      }
+      animationRef = requestAnimationFrame(animation);
+  }
+  animationRef = requestAnimationFrame(animation);
+</script>
+</html>

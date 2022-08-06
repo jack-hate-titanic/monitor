@@ -2,7 +2,7 @@
  * @Author: 悦者生存 1002783067@qq.com
  * @Date: 2022-05-26 21:35:36
  * @LastEditors: 悦者生存 1002783067@qq.com
- * @LastEditTime: 2022-05-26 22:09:08
+ * @LastEditTime: 2022-06-01 08:10:04
  * @FilePath: /frontDemo/bubbleSort.ts
  * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
  */
@@ -34,6 +34,8 @@ function bubbleSort(nums: number[]) {
 //   }
 // }
 
-const nums = [2, 4, 6, 31, 5];
-bubbleSort(nums);
-console.log(nums);
+const map = new Map();
+let lll = { a: 1 };
+map.set(lll, 10);
+map.set(lll,10);
+console.log(map);
