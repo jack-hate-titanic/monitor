@@ -1,8 +1,17 @@
+/*
+ * @Author: 悦者生存 1002783067@qq.com
+ * @Date: 2020-05-31 22:47:25
+ * @LastEditors: 悦者生存 1002783067@qq.com
+ * @LastEditTime: 2022-08-13 20:24:42
+ * @FilePath: /monitor/src/monitor/lib/jsError.js
+ * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
+ */
 
 import getLastEvent from '../utils/getLastEvent';
 import getSelector from '../utils/getSelector';
 import tracker from '../utils/tracker';
 export function injectJsError() {
+    // 要使用捕获，因为捕获既可以捕捉js语法错误，也能捕获资源加载错误
     //监听全局未捕获的错误
     window.addEventListener('error', function (event) {//错误事件对象
         let lastEvent = getLastEvent();//最后一个交互事件
@@ -31,6 +40,7 @@ export function injectJsError() {
             });
         }
     }, true);
+    // 捕获异步错误
     window.addEventListener('unhandledrejection', (event) => {
         console.log(event);
         let lastEvent = getLastEvent();//最后一个交互事件
