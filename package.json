@@ -4,14 +4,20 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "webpack",
+    "build-example": "webpack --config ./example/webpack.config.js",
+    "start-example": "nodemon ./example/server.js",
     "dev": "webpack-dev-server"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "chalk": "^4.1.2",
     "html-webpack-plugin": "^4.3.0",
+    "koa": "^2.13.4",
+    "koa-static": "^5.0.0",
+    "koa-webpack": "^6.0.0",
+    "nodemon": "^2.0.19",
     "user-agent": "^1.0.4",
     "webpack": "^4.43.0",
     "webpack-cli": "^3.3.11"
