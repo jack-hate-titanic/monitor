@@ -2,7 +2,7 @@
  * @Author: 悦者生存 1002783067@qq.com
  * @Date: 2022-08-13 21:25:32
  * @LastEditors: 悦者生存 1002783067@qq.com
- * @LastEditTime: 2022-08-13 21:32:03
+ * @LastEditTime: 2022-08-14 21:41:00
  * @FilePath: /monitor/example/JsError/index.html
  * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
 -->
@@ -12,10 +12,28 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>JsError</title>
+  <script async src="/dist/JsError.js"></script>
 </head>
 <body>
+  <div id="container">
+    <img src="xxxx.jpg"/>
+      <div class="content">
+          <input type="button" value="点击抛出错误" onclick="btnClick()" />
+          <input type="button" value="点击抛出promise错误" onclick="btnPromiseClick()" />
+      </div>
+  </div>
+
+  <script>
+      function btnClick() {
+          window.someVariable.error = 'someVariable';
+      }
+      function btnPromiseClick() {
+          new Promise(function (resolve, reject) {
+              console.log(someVar.some);
+          });
+      }
+  </script>
   
 </body>
-<script src="/dist/JsError.js"></script>
 </html>
