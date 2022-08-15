@@ -2,7 +2,7 @@
  * @Author: 悦者生存 1002783067@qq.com
  * @Date: 2020-05-31 22:47:25
  * @LastEditors: 悦者生存 1002783067@qq.com
- * @LastEditTime: 2022-08-13 21:36:11
+ * @LastEditTime: 2022-08-15 21:52:45
  * @FilePath: /monitor/example/webpack.config.js
  * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
  */
@@ -24,6 +24,6 @@ module.exports = {
         path: path.resolve(__dirname, 'dist'),//输出目录
         filename: '[name].js',//文件名
         publicPath: '/dist/'
-    },
+    }
 
 }

@@ -1,0 +1,40 @@
+<!--
+ * @Author: 悦者生存 1002783067@qq.com
+ * @Date: 2022-08-15 21:38:08
+ * @LastEditors: 悦者生存 1002783067@qq.com
+ * @LastEditTime: 2022-08-15 22:01:19
+ * @FilePath: /monitor/example/AjaxError/index.html
+ * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div id="container">
+    <div class="content">
+            <input type="button" value="发起ajax成功请求" onclick="sendAjaxSuccess()" />
+            <input type="button" value="发起ajax失败请求" onclick="sendAjaxError()" />
+    </div>
+</div>
+<script src="../dist/AjaxError.js"></script>
+<script>
+  function sendAjaxError(){
+    let xhr = new XMLHttpRequest();
+    xhr.open("POST",'/error',true);
+    xhr.responseType = 'json';
+    xhr.onload = function () {
+        console.log(xhr.response);
+    }
+    xhr.onerror = function (error) {
+         console.log(error);
+    }
+    xhr.send("ws");
+  }
+</script>
+</body>
+</html>
