@@ -1,9 +1,9 @@
 <!--
  * @Author: 悦者生存 1002783067@qq.com
- * @Date: 2022-08-13 21:45:49
+ * @Date: 2022-08-16 08:15:35
  * @LastEditors: 悦者生存 1002783067@qq.com
- * @LastEditTime: 2022-08-16 08:25:16
- * @FilePath: /monitor/example/index.html
+ * @LastEditTime: 2022-08-16 08:34:19
+ * @FilePath: /monitor/example/Timing/index.html
  * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
 -->
 <!DOCTYPE html>
@@ -13,19 +13,21 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
-  <link rel="prefetch" href="/dist/JsError.js"></link>
 </head>
 <body>
-  <ul>
-    <li>
-      <a href="/JsError">JsError</a>
-    </li>
-    <li>
-      <a href="/AjaxError">AjaxError</a>
-    </li>
-    <li>
-      <a href="/Timing">Timing</a>
-    </li>
-  </ul>
+  <div id="container">
+    <div class="content" style="width: 600px;word-wrap: break-word;">
+    
+    </div>
+  </div>
 </body>
+<script src="/dist/Timing.js"></script>
+<script>
+  document.addEventListener("DOMContentLoaded", function(){
+    let start = Date.now();
+    while((Date.now() - start)<100){
+      
+    }
+  })
+</script>
 </html>
