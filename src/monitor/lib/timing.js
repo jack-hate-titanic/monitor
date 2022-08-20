@@ -2,7 +2,7 @@
  * @Author: 悦者生存 1002783067@qq.com
  * @Date: 2020-05-31 22:47:25
  * @LastEditors: 悦者生存 1002783067@qq.com
- * @LastEditTime: 2022-08-16 08:33:28
+ * @LastEditTime: 2022-08-20 12:42:32
  * @FilePath: /monitor/src/monitor/lib/timing.js
  * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
  */
@@ -16,6 +16,7 @@ export function timing() {
     if (PerformanceObserver) {
         new PerformanceObserver((entryList, observer) => {
             let perfEntries = entryList.getEntries();
+            console.log(perfEntries,'perfEntries');
             FMP = perfEntries[0];//startTime 2000以后
             observer.disconnect();//不再观察了
         }).observe({ entryTypes: ['element'] });//观察页面中的意义的元素
@@ -69,11 +70,11 @@ export function timing() {
             tracker.send({
                 kind: 'experience',//用户体验指标
                 type: 'timing',//统计每个阶段的时间
-                connectTime: connectEnd - connectStart,//连接时间
-                ttfbTime: responseStart - requestStart,//首字节到达时间
+                connectTime: connectEnd - connectStart,//TCP连接时间
+                ttfbTime: responseStart - requestStart,//ttfb
                 responseTime: responseEnd - responseStart,//响应的读取时间
                 parseDOMTime: loadEventStart - domLoading,//DOM解析的时间
-                domContentLoadedTime: domContentLoadedEventEnd - domContentLoadedEventStart,
+                domContentLoadedTime: domContentLoadedEventEnd - domContentLoadedEventStart,//DOMContentLoaded事件回调耗时
                 timeToInteractive: domInteractive - fetchStart,//首次可交互时间
                 loadTIme: loadEventStart - fetchStart //完整的加载时间
             });

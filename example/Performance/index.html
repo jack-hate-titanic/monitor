@@ -1,9 +1,9 @@
 <!--
  * @Author: 悦者生存 1002783067@qq.com
- * @Date: 2022-08-16 08:15:35
+ * @Date: 2022-08-20 12:59:27
  * @LastEditors: 悦者生存 1002783067@qq.com
- * @LastEditTime: 2022-08-20 13:00:27
- * @FilePath: /monitor/example/Timing/index.html
+ * @LastEditTime: 2022-08-20 13:01:51
+ * @FilePath: /monitor/example/Performance/index.html
  * @Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
 -->
 <!DOCTYPE html>
@@ -19,13 +19,14 @@
       <div class="content" style="width: 600px; word-wrap: break-word"></div>
     </div>
   </body>
-  <script src="/dist/Timing.js"></script>
+  <script src="/dist/Performance.js"></script>
   <script>
-    document.addEventListener("DOMContentLoaded", function(){
-      let start = Date.now();
-      while((Date.now() - start)<100){
-
-      }
-    })
+    let content = document.getElementsByClassName("content")[0];
+    setTimeout(() => {
+      let h1 = document.createElement("h1");
+      h1.innerHTML = "我是最有重要的内容";
+      h1.setAttribute("elementtiming", "meaningful");
+      content.appendChild(h1);
+    }, 2000);
   </script>
 </html>
